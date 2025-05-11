@@ -1,0 +1,282 @@
+01/03/2023:
+Basic game logic:
+	Sun, pea, zombie moving.
+	Handle click to choose seed and plant.
+	Double click to dig the plant.
+	Increase player's sun_count and remove sun after click.
+	SDL render basic: Make a window class for necessary functions.
+	Handle collision: pea vs zombie, zombie vs plant.
+	Walnut has his 3 appearance depending on his health.
+	Remove plant if it reach its bite-limit.
+	Get and random number waves, zombies from level files.
+	Read player saved data.
+	Display all things in 'Elements' struct on screen.
+
+07/03/2023:
+	Render things base on their image ratio.
+	Using map for loading each image only once.
+
+08/03/2023:
+Add more features:
+	Double click or click on other plant to cancel choosing plant.
+	Change the click priority. Remove double clicking for dig a plant.
+	Cannot plant on an used tile.
+	Change some void functions to bool ones for optimization.
+Divide game.cpp into some headers and cpps.
+
+12/03/2023:
+Change game logic:
+	Suns from sunflowers will not appear at the same time.
+	Peas from peashooters will not appear at the same time.
+	One pea hit only one zombies at a time.
+
+
+15/03/2023:
+Add more features:
+	Now plant seed has refresh remaining time.
+	Control game FPS.
+	Change some elements' speed.
+	Change peashooter, sunflower, zombie from image to sprite sheet.
+
+16/03/2023:
+	FPS down to 60
+	Render plant at the mouse position when its plant seed is chosen.
+	Zombie blink when attacked.
+	Update losing screen.
+	Using enum for image instead of string to remove map<string, SDL_Texture*> in rsdl.cpp.
+	Change Walnut sprite sheet.
+	Add blink when being attacked for sunflower.
+
+17/03/2023:
+	Add zombie status animation: Zombie die, zombie eat.
+	Add walnut blink.
+	Ready - Set - Plant before the game start.
+	Plant from seleted plant seed will be opaque.
+	Add peashooters blink and attacking status.
+	Divide elements_actions into more files. Make some template function (zombie.h) to shorten the code.
+
+18/03/2023:
+	Divide into more files.
+	Fix some pea's bug.
+	Add animation for clicked suns.
+	Add Button struct.
+	Now we can remove planted plant using Shovel.
+	Add choosing level screen.
+	Fix to fast FPS.
+Not in code:
+	Change font using.
+
+19/03/2023:
+	Fix cannot show many texts at once.
+	Using Vsync.
+	Add some level choosing feature and animation.
+	Add music: Brainiac Maniac.
+	Add update player's data (the number of unlocked levels).
+	Press w to win the game.
+	Dim the locked levels.
+	*Now we can choose level after a level finished.*
+
+20/03/2023:
+	New feature:
+		If a plant seed is chosen and next click is invalid, remove it.
+		Level 1, 2 has another background. Change the map coordinates connected with them.
+	Fix the winning and losing background is not shown.
+	Change game icon.
+	Add sunflower animation when it gives us sun.
+	Change normal sunflower animation.
+
+21/03/2023:
+	Fixed: The row is not ramdom.
+	Reduce the empty time between waves of zombies when all current zombies died.
+
+22/03/2023:
+	Using mt19937 for random.
+	Fix pause animation.
+	Change plants can be used for each level (lv1: just peashooter, lv2: peashooter, sunflower).
+	Add peashooter blink.
+	Random zombies' first frame.
+
+24/03/2023:
+	Add musics and sound effects.
+
+25/03/2023:
+	Add Cone-head Zombie (2 normal health) and Bucket-head Zombie (3 normal health).
+	Add player's Trip to game.
+	Add snowpea animation (but cannot plant it).
+	Add zombie walking 1, 2 animation.
+	Fix bug: delete plant before reset is_planted tile.
+	Add snowz_pea (snowpea's bullet).
+	Add fade out animation when change screen.
+	Clear renderer to fix lag.
+
+26/03/2023:	
+	Rearrange files.
+	Fix bug: peashooter still fire peas if zombie go after it!!!
+	0.20% to play zombie groan sound effect.
+	Add snowpea effect: slow the zombie.
+
+27/03/2023:
+	New makefile: just compile the modified .cpp(s) (depend on last write time from system) --> faster compile
+	Snowpea's leaf: -100 Hue and -20 Saturation, colorize
+	Snowpea's other = Peashooter +180 hue and +100 saturation, colorize.
+	Peashooter and Snowpea still fire if they are in attack status and reach 32th frame (although there is no alive zombie).
+	Change level files struct: add number of conehead zombie and buckethead zombie each wave.
+	Keep zombies' cold time after they lost their armor.
+	Add levels: 5, 6, 7, 8
+	**Level 8 is night: No more suns from sky.**
+
+TOTAL now: 4 plants and 3 zombies available.
+
+28/03/2023:
+	New sound when pea reach zombie's shield (bucket, door).
+	Buckethead, Conehead zombie degrade. (Photoshop)
+	Bucket, cone drop animation.
+
+29/03/2023:
+	Buckethead, Conehead zombie degrade blink and cold. (Photoshop)
+	New user menu is shown on first play: Player can input their name.
+	Player can change their name, reset their progression, quit game on choose-levels screen.
+	Total code length: 5k2 lines =))
+
+30/03/2023:
+	Add Final Wave message.
+	Sun will be more transparent if it has waited too long.
+	Level will blink if we move the mouse over. "LEVEL X" will turn green too.
+	Enter to OK the name.
+	Change key-to-win: CTRL + SHIFT + ALT + W
+	Add FPS cap if FPS > 60: win.update_screen();
+
+31/03/2023:
+	Add cherry bomb and flag zombie.
+	Add some sound effects: snowz peas effect, zombie die effect, cherry bomb effect...
+
+01/04/2023:
+	Add blink when mouse is over any button, any plant seed and shovel.
+	Add blink to the row and column when mouse is over the tile and player is planting or shoveling.
+	Add some prompt (let player ensure their choice one more time): Restart, Main menu, Reset Level, Quit game.
+
+02/04/2023:
+	Using extern variable for shorter code.
+	Remove seed lift sound when player can't choose and plant_plant sound when player can't plant.
+	Add buzzer sound and player.sun_count blink when player has not enough sun.
+	Now each plant's, each zombie's struct is in their files.
+	Cherrybomb blink.
+	include exactly for each file.
+
+03/04/2023:
+	Add in-game announcement.
+
+05/04/2023:
+	Fix bug: no change in zombie eating status.
+	Change all .h to .hpp
+	Group .cpps and .hpps into folders.
+	Photoshop: Add black border to zombies' sheets.
+
+06/04/2023:
+	Photoshop: Change row and column blink
+
+07/04/2023:
+	Add game progress bar: Hugewave
+
+08/04/2023:
+	Add Turbo Button: speed up the game.
+	Fix bug: render a 0-width or 0-height images.
+	Minus index after erase sth.
+
+09-10/04/2023:
+	Change game stats.
+	1,2,3,4,5 to plant
+	s to shovel
+
+11/04/2023:
+	No render frame that does not need when x2.
+	flower happy blink.
+	No more zombie appears until the last zombie die -> create zombie: while --> do - while (zombie respond).
+	Each zombie bite a plant at a time.
+	SDL_CaptureMouse: outside mouse. Now can pause game if player click outside the window.
+	Pause sound effect when game paused.
+
+12/04/2023:
+	Add mouse cursor: SDL_SetCursor
+	Change number of audio channel: Mix_AllocateChannels
+	--> Fix bug: many sound effects does not play.
+	Use game_state instead of many bool variables.
+
+13/04/2023:
+	New: Mowers to protect the house better.
+	Draw plants, zombies, mowers by each row.
+	Increase sun's opacity.
+	Buff snowpea: increase slow rate (by sort zombies in other order).
+	New: plants', peas', zombies' shadow.
+	Auto disable turbo if zombie is too near the house. Of course player can enable it again.
+
+14-17/04/2023:
+	Snow pea new appearance.
+	Zombie animation upgrade.
+	Add flag zombie type and their degrade.
+	Seed packet chosen animation.
+	Shorten the code. Using struct Images contains string img_dir and n_sheet, c_sheet.
+	Add zombie next time step to zombie struct.
+	Fix bug: when player is picking a plant, then they click on another invalid plant, chosen plant won't be reset ---> will be reset
+	
+19/04/2023:
+	Make OOP : class Plants
+	Make credit before begin the game	
+
+19/04/2023:
+	Zombie door: Snow peas cannot slow him until he lost his door.
+	Fix bug of pea: 2 times erase()
+
+21-23/04/2023:
+	Zombie OOP.
+	Update some textures.
+	
+May 2023: 
+	has_zombie_reached_plant 45 loops --> 1
+	row, col blink --> 1 loop
+	git lfs --> upload SDL library.
+	Update readme.md
+
+28/08/2023:
+	add sod roll when start level 1, 2, 3
+	random angle of pea splats
+
+03/09/2023:
+	add loading screen
+	change starting screen
+
+Dim = Exposue - 3.20
+
+06/04/2024:
+	Use json files for some game parameters.
+	Found that "make -j" is faster than "make" (multithread) 
+	but you must "make -j compile" and then "make run"
+
+08/04/2024:
+	Fix mowers, lost screen.
+	Levels to json files.
+
+09/04/2024:
+	Add Hugewave and Final wave animation.
+
+11/04/2024:
+	Bullets class.
+	Separate plants' and zombies' modules.
+
+13/04/2024:
+	Add potato mine.
+	Change some animations.
+	Change seed packets and new plant pages.
+
+29/04/2024:
+	Reduce dependencies between .hpp and .cpp --> link files faster.
+	Change all buttons.
+	Don't need blink png anymore.
+
+01/05/2024:
+	Optimize RAM (<= 300MB)
+
+TODO: 
+- choose plants screen
+- change the announcements
+- reverse progress bar

@@ -1,0 +1,866 @@
+src\draw\ImageType.hpp:371:5: style: Struct 'Image' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Image(string _dir);
+    ^
+src\draw\rsdl.hpp:132:7: performance: inconclusive: Technically the member function 'Window::dump_err' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+ void dump_err() { std::cerr << SDL_GetError() << '\n'; }
+      ^
+src\draw\rsdl.hpp:59:2: style: Class 'Window' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+ Window(int width = 800, int height = 400, string title = "PVZ - Kaito NMH Edition");
+ ^
+src\draw\rsdl.hpp:133:7: performance: inconclusive: Technically the member function 'Window::init' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+ void init();
+      ^
+src\draw\rsdl.cpp:9:14: note: Technically the member function 'Window::init' can be static (but you may consider moving to unnamed namespace).
+void Window::init()
+             ^
+src\draw\rsdl.hpp:133:7: note: Technically the member function 'Window::init' can be static (but you may consider moving to unnamed namespace).
+ void init();
+      ^
+src\draw\rsdl_img.cpp:49:22: style: C-style pointer casting [cstyleCast]
+    Uint32 *pixels = (Uint32 *)loadedSurface->pixels;
+                     ^
+src\draw\rsdl_img.cpp:21:31: style: Parameter 'res' can be declared as pointer to const [constParameterPointer]
+void print_error(SDL_Texture *res, const string &img)
+                              ^
+src\elements\button\button.cpp:56:9: warning: inconclusive: Member variable 'Button::x1' is not initialized in the constructor. [uninitMemberVar]
+Button::Button()
+        ^
+src\draw\rsdl.cpp:27:46: performance: Function parameter 'title' should be passed by const reference. However it seems that 'Window' is a callback function. [passedByValueCallback]
+Window::Window(int width, int height, string title)
+                                             ^
+src\draw\rsdl.hpp:54:7: note: Function pointer used here.
+class Window
+      ^
+src\draw\rsdl.cpp:27:46: note: Function parameter 'title' should be passed by const reference. However it seems that 'Window' is a callback function.
+Window::Window(int width, int height, string title)
+                                             ^
+src\draw\ImageType.cpp:3:0: information: Include file: "iostream" not found. [missingInclude]
+#include "iostream"
+^
+src\draw\rsdl_img.cpp:33:31: style: Parameter 'res' can be declared as pointer to const [constParameterPointer]
+void print_error(SDL_Surface *res, const string &img)
+                              ^
+src\elements\button\button.cpp:56:9: warning: inconclusive: Member variable 'Button::x2' is not initialized in the constructor. [uninitMemberVar]
+Button::Button()
+        ^
+src\elements\bullets\bullet.cpp:11:9: warning: Member variable 'Bullet::y_location' is not initialized in the constructor. [uninitMemberVar]
+Bullet::Bullet(int _type, int _row, int _x)
+        ^
+src\elements\SeedPacket\SeedPacket.cpp:9:13: warning: Member variable 'SeedPacket::x' is not initialized in the constructor. [uninitMemberVar]
+SeedPacket::SeedPacket(int plant_name)
+            ^
+src\draw\ImageType.cpp:156:5: performance: Variable 'img_dir' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
+    img_dir = _dir;
+    ^
+src\elements\announcer\announcer.cpp:8:12: warning: Member variable 'Announcer::img_directory' is not initialized in the constructor. [uninitMemberVar]
+Announcer::Announcer()
+           ^
+src\draw\rsdl_ttf.cpp:30:88: style: inconclusive: Function 'show_text' argument 7 names different: declaration 'aplha' definition 'alpha'. [funcArgNamesDifferent]
+                       const RGB &color, string font_addr, const int &size, const int &alpha)
+                                                                                       ^
+src\draw\rsdl.hpp:105:41: note: Function 'show_text' argument 7 names different: declaration 'aplha' definition 'alpha'.
+       const int &size = 24, const int &aplha = 255);
+                                        ^
+src\draw\rsdl_ttf.cpp:30:88: note: Function 'show_text' argument 7 names different: declaration 'aplha' definition 'alpha'.
+                       const RGB &color, string font_addr, const int &size, const int &alpha)
+                                                                                       ^
+src\elements\zombies\bucket\bucket_zombie.hpp:7:6: style: The destructor '~BucketZombie' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+    ~BucketZombie();
+     ^
+src\elements\zombies\zombie_struct.hpp:54:14: note: Virtual destructor in base class
+    virtual ~Zombie();
+             ^
+src\elements\zombies\bucket\bucket_zombie.hpp:7:6: note: Destructor in derived class
+    ~BucketZombie();
+     ^
+src\elements\button\button.cpp:56:9: warning: inconclusive: Member variable 'Button::y1' is not initialized in the constructor. [uninitMemberVar]
+Button::Button()
+        ^
+src\elements\bullets\bullet.cpp:11:9: warning: Member variable 'Bullet::directory_num' is not initialized in the constructor. [uninitMemberVar]
+Bullet::Bullet(int _type, int _row, int _x)
+        ^
+src\elements\SeedPacket\SeedPacket.cpp:9:13: warning: Member variable 'SeedPacket::y' is not initialized in the constructor. [uninitMemberVar]
+SeedPacket::SeedPacket(int plant_name)
+            ^
+src\elements\bullets\snowpea\snowzpea.hpp:8:10: style: The function 'move' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    void move();
+         ^
+src\elements\bullets\bullet.hpp:34:18: note: Virtual function in base class
+    virtual void move() = 0;
+                 ^
+src\elements\bullets\snowpea\snowzpea.hpp:8:10: note: Function in derived class
+    void move();
+         ^
+src\elements\SeedPacket\SeedPacket.hpp:20:5: style: Class 'SeedPacket' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    SeedPacket(int plant_name);
+    ^
+src\draw\ImageType.cpp:163:5: performance: Variable 'img_dir' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
+    img_dir = _dir;
+    ^
+src\elements\bullets\pea\pea.hpp:8:10: style: The function 'move' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    void move();
+         ^
+src\elements\bullets\bullet.hpp:34:18: note: Virtual function in base class
+    virtual void move() = 0;
+                 ^
+src\elements\bullets\pea\pea.hpp:8:10: note: Function in derived class
+    void move();
+         ^
+src\elements\announcer\announcer.cpp:8:12: warning: Member variable 'Announcer::sound_directory' is not initialized in the constructor. [uninitMemberVar]
+Announcer::Announcer()
+           ^
+src\draw\rsdl_ttf.cpp:102:58: performance: Function parameter 'font_addr' should be passed by const reference. [passedByValue]
+                                const RGB &color, string font_addr,
+                                                         ^
+src\elements\collision\AttackPlantVsZombie.cpp:44:22: style: Variable 'zombie' can be declared as pointer to const [constVariableReference]
+    for (const auto &zombie : zombies)
+                     ^
+src\elements\collision\MowerVsZombie.cpp:79:33: style: Parameter 'mower' can be declared as reference to const [constParameterReference]
+bool is_mower_hit_zombie(Mower &mower, Zombie &zombie)
+                                ^
+src\elements\collision\MowerVsZombie.cpp:79:48: style: Parameter 'zombie' can be declared as reference to const [constParameterReference]
+bool is_mower_hit_zombie(Mower &mower, Zombie &zombie)
+                                               ^
+src\elements\collision\MowerVsZombie.cpp:17:16: style: Variable 'zombie' can be declared as pointer to const [constVariableReference]
+    for (auto &zombie : zombies)
+               ^
+src\elements\button\button.cpp:56:9: warning: inconclusive: Member variable 'Button::y2' is not initialized in the constructor. [uninitMemberVar]
+Button::Button()
+        ^
+src\elements\bullets\bullet.cpp:11:9: warning: Member variable 'Bullet::width' is not initialized in the constructor. [uninitMemberVar]
+Bullet::Bullet(int _type, int _row, int _x)
+        ^
+src\elements\collision\InstancePlantVsZombie.cpp:3:46: style: Parameter 'plant' can be declared as reference to const [constParameterReference]
+void apply_instance_plant_hit_zombie(Plants &plant, vector<Zombie *> &zombies,
+                                             ^
+src\elements\bullets\snowpea\snowzpea.hpp:9:10: style: The function 'display' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    void display();
+         ^
+src\elements\bullets\bullet.hpp:35:18: note: Virtual function in base class
+    virtual void display() = 0;
+                 ^
+src\elements\bullets\snowpea\snowzpea.hpp:9:10: note: Function in derived class
+    void display();
+         ^
+src\draw\ImageType.cpp:170:5: performance: Variable 'img_dir' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
+    img_dir = _dir;
+    ^
+src\elements\bullets\pea\pea.hpp:9:10: style: The function 'display' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    void display();
+         ^
+src\elements\bullets\bullet.hpp:35:18: note: Virtual function in base class
+    virtual void display() = 0;
+                 ^
+src\elements\bullets\pea\pea.hpp:9:10: note: Function in derived class
+    void display();
+         ^
+src\elements\announcer\announcer.cpp:8:12: warning: Member variable 'Announcer::remain_time' is not initialized in the constructor. [uninitMemberVar]
+Announcer::Announcer()
+           ^
+src\draw\rsdl_ttf.cpp:112:58: performance: Function parameter 'font_addr' should be passed by const reference. [passedByValue]
+                                const RGB &color, string font_addr,
+                                                         ^
+src\elements\zombies\door\door_zombie.hpp:7:6: style: The destructor '~DoorZombie' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+    ~DoorZombie();
+     ^
+src\elements\zombies\zombie_struct.hpp:54:14: note: Virtual destructor in base class
+    virtual ~Zombie();
+             ^
+src\elements\zombies\door\door_zombie.hpp:7:6: note: Destructor in derived class
+    ~DoorZombie();
+     ^
+src\elements\Player\Player.hpp:16:10: performance: inconclusive: Technically the member function 'Player::is_choosing_a_plant' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    bool is_choosing_a_plant();
+         ^
+src\elements\Player\Player.cpp:3:14: note: Technically the member function 'Player::is_choosing_a_plant' can be static (but you may consider moving to unnamed namespace).
+bool Player::is_choosing_a_plant()
+             ^
+src\elements\Player\Player.hpp:16:10: note: Technically the member function 'Player::is_choosing_a_plant' can be static (but you may consider moving to unnamed namespace).
+    bool is_choosing_a_plant();
+         ^
+src\elements\zombies\cone\cone_zombie.hpp:7:6: style: The destructor '~ConeZombie' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+    ~ConeZombie();
+     ^
+src\elements\zombies\zombie_struct.hpp:54:14: note: Virtual destructor in base class
+    virtual ~Zombie();
+             ^
+src\elements\zombies\cone\cone_zombie.hpp:7:6: note: Destructor in derived class
+    ~ConeZombie();
+     ^
+src\elements\bullets\bullet.cpp:11:9: warning: Member variable 'Bullet::height' is not initialized in the constructor. [uninitMemberVar]
+Bullet::Bullet(int _type, int _row, int _x)
+        ^
+src\elements\bullets\snowpea\snowzpea.hpp:10:10: style: The function 'crash_effect' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    void crash_effect();
+         ^
+src\elements\bullets\bullet.hpp:36:18: note: Virtual function in base class
+    virtual void crash_effect(){};
+                 ^
+src\elements\bullets\snowpea\snowzpea.hpp:10:10: note: Function in derived class
+    void crash_effect();
+         ^
+src\draw\ImageType.cpp:154:21: performance: Function parameter '_dir' should be passed by const reference. [passedByValue]
+Image::Image(string _dir)
+                    ^
+src\elements\bullets\pea\pea.hpp:10:10: style: The function 'crash_effect' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    void crash_effect();
+         ^
+src\elements\bullets\bullet.hpp:36:18: note: Virtual function in base class
+    virtual void crash_effect(){};
+                 ^
+src\elements\bullets\pea\pea.hpp:10:10: note: Function in derived class
+    void crash_effect();
+         ^
+src\elements\announcer\announcer.cpp:8:12: warning: Member variable 'Announcer::state' is not initialized in the constructor. [uninitMemberVar]
+Announcer::Announcer()
+           ^
+src\elements\collision\AttackPlantVsZombie.cpp:44:5: style: Consider using std::any_of algorithm instead of a raw loop. [useStlAlgorithm]
+    for (const auto &zombie : zombies)
+    ^
+src\draw\rsdl_ttf.cpp:125:56: performance: Function parameter 'font_addr' should be passed by const reference. [passedByValue]
+                              const RGB &color, string font_addr,
+                                                       ^
+src\elements\zombies\flag\flag_zombie.hpp:7:6: style: The destructor '~FlagZombie' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+    ~FlagZombie();
+     ^
+src\elements\zombies\zombie_struct.hpp:54:14: note: Virtual destructor in base class
+    virtual ~Zombie();
+             ^
+src\elements\zombies\flag\flag_zombie.hpp:7:6: note: Destructor in derived class
+    ~FlagZombie();
+     ^
+src\elements\zombies\normal\normal_zombie.hpp:7:6: style: The destructor '~NormalZombie' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+    ~NormalZombie();
+     ^
+src\elements\zombies\zombie_struct.hpp:54:14: note: Virtual destructor in base class
+    virtual ~Zombie();
+             ^
+src\elements\zombies\normal\normal_zombie.hpp:7:6: note: Destructor in derived class
+    ~NormalZombie();
+     ^
+src\elements\bullets\bullet.hpp:29:10: style: inconclusive: Technically the member function 'Bullet::has_exploded' can be const. [functionConst]
+    bool has_exploded();
+         ^
+src\elements\bullets\bullet.cpp:39:14: note: Technically the member function 'Bullet::has_exploded' can be const.
+bool Bullet::has_exploded()
+             ^
+src\elements\bullets\bullet.hpp:29:10: note: Technically the member function 'Bullet::has_exploded' can be const.
+    bool has_exploded();
+         ^
+src\elements\plants\PotatoMine\PotatoMine.hpp:21:6: style: The destructor '~PotatoMine' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+    ~PotatoMine();
+     ^
+src\elements\plants\plants.hpp:50:14: note: Virtual destructor in base class
+    virtual ~Plants();
+             ^
+src\elements\plants\PotatoMine\PotatoMine.hpp:21:6: note: Destructor in derived class
+    ~PotatoMine();
+     ^
+src\draw\ImageType.cpp:161:21: performance: Function parameter '_dir' should be passed by const reference. [passedByValue]
+Image::Image(string _dir, int _n, int _c)
+                    ^
+src\elements\bullets\pea\pea.hpp:11:10: style: The function 'make_explode' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    void make_explode();
+         ^
+src\elements\bullets\bullet.hpp:37:18: note: Virtual function in base class
+    virtual void make_explode(){};
+                 ^
+src\elements\bullets\pea\pea.hpp:11:10: note: Function in derived class
+    void make_explode();
+         ^
+src\elements\announcer\announcer.hpp:19:10: style: inconclusive: Technically the member function 'Announcer::is_finished' can be const. [functionConst]
+    bool is_finished();
+         ^
+src\elements\announcer\announcer.cpp:39:17: note: Technically the member function 'Announcer::is_finished' can be const.
+bool Announcer::is_finished()
+                ^
+src\elements\announcer\announcer.hpp:19:10: note: Technically the member function 'Announcer::is_finished' can be const.
+    bool is_finished();
+         ^
+src\elements\collision\BulletVsZombie.cpp:59:30: style: Parameter 'bullet' can be declared as reference to const [constParameterReference]
+void snow_pea_effect(Bullet &bullet, Zombie &zombie)
+                             ^
+src\elements\bullets\snowpea\snowzpea.hpp:11:10: style: The function 'make_explode' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    void make_explode();
+         ^
+src\elements\bullets\bullet.hpp:37:18: note: Virtual function in base class
+    virtual void make_explode(){};
+                 ^
+src\elements\bullets\snowpea\snowzpea.hpp:11:10: note: Function in derived class
+    void make_explode();
+         ^
+src\elements\bullets\bullet.hpp:31:10: style: inconclusive: Technically the member function 'Bullet::display_shadow' can be const. [functionConst]
+    void display_shadow();
+         ^
+src\elements\bullets\bullet.cpp:57:14: note: Technically the member function 'Bullet::display_shadow' can be const.
+void Bullet::display_shadow()
+             ^
+src\elements\bullets\bullet.hpp:31:10: note: Technically the member function 'Bullet::display_shadow' can be const.
+    void display_shadow();
+         ^
+src\elements\plants\PotatoMine\PotatoMine.hpp:26:10: style: The function 'next_frame' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    void next_frame(const PlantAssets &assets);
+         ^
+src\elements\plants\plants.hpp:53:18: note: Virtual function in base class
+    virtual void next_frame(const PlantAssets &assets);
+                 ^
+src\elements\plants\PotatoMine\PotatoMine.hpp:26:10: note: Function in derived class
+    void next_frame(const PlantAssets &assets);
+         ^
+src\elements\plants\cherrybomb\cherrybomb.hpp:11:6: style: The destructor '~CherryBomb' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+    ~CherryBomb();
+     ^
+src\elements\plants\plants.hpp:50:14: note: Virtual destructor in base class
+    virtual ~Plants();
+             ^
+src\elements\plants\cherrybomb\cherrybomb.hpp:11:6: note: Destructor in derived class
+    ~CherryBomb();
+     ^
+src\draw\ImageType.cpp:168:21: performance: Function parameter '_dir' should be passed by const reference. [passedByValue]
+Image::Image(string _dir, int _n, int _c, int _a)
+                    ^
+src\elements\announcer\announcer.cpp:28:12: style: The scope of the variable 't' can be reduced. [variableScope]
+    double t = (1.0 - 3 * (ANNOUNCER_CLK_COUNT - CAP_ANNOUNCER_CLK_COUNT)) / CAP_ANNOUNCER_CLK_COUNT;
+           ^
+src\elements\plants\cherrybomb\cherrybomb.hpp:16:10: style: The function 'next_frame' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    void next_frame(const PlantAssets &assets);
+         ^
+src\elements\plants\plants.hpp:53:18: note: Virtual function in base class
+    virtual void next_frame(const PlantAssets &assets);
+                 ^
+src\elements\plants\cherrybomb\cherrybomb.hpp:16:10: note: Function in derived class
+    void next_frame(const PlantAssets &assets);
+         ^
+src\elements\plants\peashooter\peashooter.hpp:9:6: style: The destructor '~Peashooter' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+    ~Peashooter();
+     ^
+src\elements\plants\plants.hpp:50:14: note: Virtual destructor in base class
+    virtual ~Plants();
+             ^
+src\elements\plants\peashooter\peashooter.hpp:9:6: note: Destructor in derived class
+    ~Peashooter();
+     ^
+src\draw\ImageType.cpp:141:0: style: Consider using std::find_if algorithm instead of a raw loop. [useStlAlgorithm]
+        if (i.second == img_dir)
+^
+src\elements\mower\mower.cpp:13:8: warning: inconclusive: Member variable 'Mower::x' is not initialized in the constructor. [uninitMemberVar]
+Mower::Mower()
+       ^
+src\elements\announcer\announcer.cpp:10:5: style: Instance of 'Announcer' object is destroyed immediately. [unusedScopedObject]
+    Announcer(NULL_DIRECTORY, NULL_MUSIC_DIRECTORY);
+    ^
+src\elements\plants\snowpea\snowpea.hpp:9:6: style: The destructor '~SnowPea' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+    ~SnowPea();
+     ^
+src\elements\plants\plants.hpp:50:14: note: Virtual destructor in base class
+    virtual ~Plants();
+             ^
+src\elements\plants\snowpea\snowpea.hpp:9:6: note: Destructor in derived class
+    ~SnowPea();
+     ^
+src\elements\plants\sunflower\sunflower.hpp:9:6: style: The destructor '~Sunflower' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+    ~Sunflower();
+     ^
+src\elements\plants\plants.hpp:50:14: note: Virtual destructor in base class
+    virtual ~Plants();
+             ^
+src\elements\plants\sunflower\sunflower.hpp:9:6: note: Destructor in derived class
+    ~Sunflower();
+     ^
+src\elements\mower\mower.cpp:13:8: warning: inconclusive: Member variable 'Mower::row' is not initialized in the constructor. [uninitMemberVar]
+Mower::Mower()
+       ^
+src\elements\plants\wallnut\wallnut.hpp:8:6: style: The destructor '~WallNut' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+    ~WallNut();
+     ^
+src\elements\plants\plants.hpp:50:14: note: Virtual destructor in base class
+    virtual ~Plants();
+             ^
+src\elements\plants\wallnut\wallnut.hpp:8:6: note: Destructor in derived class
+    ~WallNut();
+     ^
+src\draw\render_elements.cpp:100:22: style: Variable 'zombie' can be declared as pointer to const [constVariableReference]
+    for (const auto &zombie : game_characters.zombies)
+                     ^
+src\elements\mower\mower.cpp:13:8: warning: inconclusive: Member variable 'Mower::frame' is not initialized in the constructor. [uninitMemberVar]
+Mower::Mower()
+       ^
+src\elements\mower\mower.cpp:13:8: warning: inconclusive: Member variable 'Mower::status' is not initialized in the constructor. [uninitMemberVar]
+Mower::Mower()
+       ^
+src\elements\plants\PotatoMine\PotatoMine.cpp:3:0: information: Include file: "nlohmann/json.hpp" not found. [missingInclude]
+#include "nlohmann/json.hpp"
+^
+src\elements\plants\PotatoMine\PotatoMine.hpp:27:10: style: inconclusive: Technically the member function 'PotatoMine::is_armed' can be const. [functionConst]
+    bool is_armed();
+         ^
+src\elements\plants\PotatoMine\PotatoMine.cpp:144:18: note: Technically the member function 'PotatoMine::is_armed' can be const.
+bool PotatoMine::is_armed()
+                 ^
+src\elements\plants\PotatoMine\PotatoMine.hpp:27:10: note: Technically the member function 'PotatoMine::is_armed' can be const.
+    bool is_armed();
+         ^
+src\elements\plants\cherrybomb\cherrybomb.cpp:2:0: information: Include file: "nlohmann/json.hpp" not found. [missingInclude]
+#include "nlohmann/json.hpp"
+^
+src\elements\plants\peashooter\peashooter.cpp:3:0: information: Include file: "nlohmann/json.hpp" not found. [missingInclude]
+#include "nlohmann/json.hpp"
+^
+src\elements\plants\peashooter\peashooter.hpp:13:10: style: inconclusive: Technically the member function 'Peashooter::fire_pea' can be const. [functionConst]
+    void fire_pea(vector<Bullet *> &bullets);
+         ^
+src\elements\plants\peashooter\peashooter.cpp:40:18: note: Technically the member function 'Peashooter::fire_pea' can be const.
+void Peashooter::fire_pea(vector<Bullet *> &bullets)
+                 ^
+src\elements\plants\peashooter\peashooter.hpp:13:10: note: Technically the member function 'Peashooter::fire_pea' can be const.
+    void fire_pea(vector<Bullet *> &bullets);
+         ^
+src\elements\zombies\wave.hpp:12:12: style: inconclusive: Technically the member function 'Wave::zombie_count' can be const. [functionConst]
+    size_t zombie_count();
+           ^
+src\elements\zombies\wave.cpp:8:14: note: Technically the member function 'Wave::zombie_count' can be const.
+size_t Wave::zombie_count()
+             ^
+src\elements\zombies\wave.hpp:12:12: note: Technically the member function 'Wave::zombie_count' can be const.
+    size_t zombie_count();
+           ^
+src\elements\plants\wallnut\wallnut.cpp:2:0: information: Include file: "nlohmann/json.hpp" not found. [missingInclude]
+#include "nlohmann/json.hpp"
+^
+src\elements\plants\snowpea\snowpea.cpp:3:0: information: Include file: "nlohmann/json.hpp" not found. [missingInclude]
+#include "nlohmann/json.hpp"
+^
+src\elements\plants\plants.cpp:14:9: warning: inconclusive: Member variable 'Plants::type' is not initialized in the constructor. [uninitMemberVar]
+Plants::Plants()
+        ^
+src\elements\plants\plants.cpp:14:9: warning: inconclusive: Member variable 'Plants::row' is not initialized in the constructor. [uninitMemberVar]
+Plants::Plants()
+        ^
+src\elements\plants\sunflower\sunflower.cpp:3:0: information: Include file: "nlohmann/json.hpp" not found. [missingInclude]
+#include "nlohmann/json.hpp"
+^
+src\elements\plants\snowpea\snowpea.hpp:13:10: style: inconclusive: Technically the member function 'SnowPea::fire_pea' can be const. [functionConst]
+    void fire_pea(vector<Bullet *> &bullets);
+         ^
+src\elements\plants\snowpea\snowpea.cpp:39:15: note: Technically the member function 'SnowPea::fire_pea' can be const.
+void SnowPea::fire_pea(vector<Bullet *> &bullets)
+              ^
+src\elements\plants\snowpea\snowpea.hpp:13:10: note: Technically the member function 'SnowPea::fire_pea' can be const.
+    void fire_pea(vector<Bullet *> &bullets);
+         ^
+src\elements\sun\sun.cpp:21:20: error: Uninitialized variable: temp.x_location [uninitvar]
+    suns.push_back(temp);
+                   ^
+src\elements\plants\sunflower\sunflower.hpp:13:10: style: inconclusive: Technically the member function 'Sunflower::is_gen_sun' can be const. [functionConst]
+    bool is_gen_sun();
+         ^
+src\elements\plants\sunflower\sunflower.cpp:38:17: note: Technically the member function 'Sunflower::is_gen_sun' can be const.
+bool Sunflower::is_gen_sun()
+                ^
+src\elements\plants\sunflower\sunflower.hpp:13:10: note: Technically the member function 'Sunflower::is_gen_sun' can be const.
+    bool is_gen_sun();
+         ^
+src\level\level_data.hpp:3:0: information: Include file: "nlohmann/json.hpp" not found. [missingInclude]
+#include "nlohmann/json.hpp"
+^
+src\elements\plants\plants.cpp:14:9: warning: inconclusive: Member variable 'Plants::col' is not initialized in the constructor. [uninitMemberVar]
+Plants::Plants()
+        ^
+src\elements\plants\plants.cpp:14:9: warning: inconclusive: Member variable 'Plants::health' is not initialized in the constructor. [uninitMemberVar]
+Plants::Plants()
+        ^
+src\elements\sun\sun.cpp:21:20: error: Uninitialized struct member: temp.x_location [uninitStructMember]
+    suns.push_back(temp);
+                   ^
+src\elements\plants\sunflower\sunflower.cpp:99:28: error: Uninitialized variable: temp.x_location [uninitvar]
+            suns.push_back(temp);
+                           ^
+src\elements\plants\plants_action.cpp:77:50: style: inconclusive: Function 'delete_plant' argument 2 names different: declaration 'ind' definition 'idx'. [funcArgNamesDifferent]
+void delete_plant(vector<Plants *> &plants, int &idx)
+                                                 ^
+src\elements\plants\plants.hpp:56:50: note: Function 'delete_plant' argument 2 names different: declaration 'ind' definition 'idx'.
+void delete_plant(vector<Plants *> &plants, int &ind);
+                                                 ^
+src\elements\plants\plants_action.cpp:77:50: note: Function 'delete_plant' argument 2 names different: declaration 'ind' definition 'idx'.
+void delete_plant(vector<Plants *> &plants, int &idx)
+                                                 ^
+src\elements\plants\sunflower\sunflower.cpp:99:28: error: Uninitialized struct member: temp.x_location [uninitStructMember]
+            suns.push_back(temp);
+                           ^
+src\elements\plants\plants.cpp:14:9: warning: inconclusive: Member variable 'Plants::sec_for_prepare' is not initialized in the constructor. [uninitMemberVar]
+Plants::Plants()
+        ^
+src\elements\plants\plants.cpp:14:9: warning: inconclusive: Member variable 'Plants::directory_num' is not initialized in the constructor. [uninitMemberVar]
+Plants::Plants()
+        ^
+src\elements\plants\plants_action.cpp:90:45: style: Parameter 'plants' can be declared as reference to const [constParameterReference]
+void update_plants_status(vector<Plants *> &plants)
+                                            ^
+src\elements\plants\plants.cpp:14:9: warning: inconclusive: Member variable 'Plants::attack_range' is not initialized in the constructor. [uninitMemberVar]
+Plants::Plants()
+        ^
+src\elements\plants\plants.cpp:25:9: warning: Member variable 'Plants::type' is not initialized in the constructor. [uninitMemberVar]
+Plants::Plants(const int &_row, const int &_col)
+        ^
+src\elements\plants\plants.cpp:25:9: warning: Member variable 'Plants::health' is not initialized in the constructor. [uninitMemberVar]
+Plants::Plants(const int &_row, const int &_col)
+        ^
+src\elements\plants\plants.cpp:25:9: warning: Member variable 'Plants::sec_for_prepare' is not initialized in the constructor. [uninitMemberVar]
+Plants::Plants(const int &_row, const int &_col)
+        ^
+src\elements\plants\plants.cpp:25:9: warning: Member variable 'Plants::directory_num' is not initialized in the constructor. [uninitMemberVar]
+Plants::Plants(const int &_row, const int &_col)
+        ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::health' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\plants\plants.hpp:47:10: style: inconclusive: Technically the member function 'Plants::is_died' can be const. [functionConst]
+    bool is_died();
+         ^
+src\elements\plants\plants.cpp:100:14: note: Technically the member function 'Plants::is_died' can be const.
+bool Plants::is_died()
+             ^
+src\elements\plants\plants.hpp:47:10: note: Technically the member function 'Plants::is_died' can be const.
+    bool is_died();
+         ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::directory_num' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::frame' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::dir_width' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::dir_height' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\Level\Level.cpp:5:8: warning: Member variable 'Level::level_num' is not initialized in the constructor. [uninitMemberVar]
+Level::Level()
+       ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::nZom' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::type' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::row' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\Level\Level.cpp:5:8: warning: Member variable 'Level::map_type' is not initialized in the constructor. [uninitMemberVar]
+Level::Level()
+       ^
+src\elements\Level\Level.cpp:5:8: warning: Member variable 'Level::has_sun_from_sky' is not initialized in the constructor. [uninitMemberVar]
+Level::Level()
+       ^
+src\elements\Level\Level.cpp:5:8: warning: Member variable 'Level::wave_count' is not initialized in the constructor. [uninitMemberVar]
+Level::Level()
+       ^
+src\elements\Level\Level.cpp:5:8: warning: Member variable 'Level::cur_wave' is not initialized in the constructor. [uninitMemberVar]
+Level::Level()
+       ^
+src\elements\Level\Level.cpp:5:8: warning: Member variable 'Level::final_wave' is not initialized in the constructor. [uninitMemberVar]
+Level::Level()
+       ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::x_location' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::y_location' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\events\choose_level_scene\render_scene\LevelSelector.hpp:27:10: performance: inconclusive: Technically the member function 'LevelSelector::display_locked' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void display_locked(int x, int y);
+         ^
+src\events\choose_level_scene\render_scene\LevelSelector.cpp:71:21: note: Technically the member function 'LevelSelector::display_locked' can be static (but you may consider moving to unnamed namespace).
+void LevelSelector::display_locked(int x, int y)
+                    ^
+src\events\choose_level_scene\render_scene\LevelSelector.hpp:27:10: note: Technically the member function 'LevelSelector::display_locked' can be static (but you may consider moving to unnamed namespace).
+    void display_locked(int x, int y);
+         ^
+src\events\choose_level_scene\render_scene\LevelSelector.hpp:28:10: performance: inconclusive: Technically the member function 'LevelSelector::display_blink' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void display_blink(int x, int y);
+         ^
+src\events\choose_level_scene\render_scene\LevelSelector.cpp:85:21: note: Technically the member function 'LevelSelector::display_blink' can be static (but you may consider moving to unnamed namespace).
+void LevelSelector::display_blink(int x, int y)
+                    ^
+src\events\choose_level_scene\render_scene\LevelSelector.hpp:28:10: note: Technically the member function 'LevelSelector::display_blink' can be static (but you may consider moving to unnamed namespace).
+    void display_blink(int x, int y);
+         ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::is_moving' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\Level\Level.cpp:5:8: warning: Member variable 'Level::waves_finished' is not initialized in the constructor. [uninitMemberVar]
+Level::Level()
+       ^
+src\events\choose_level_scene\render_scene\LevelSelector.hpp:29:10: performance: inconclusive: Technically the member function 'LevelSelector::display_complete' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void display_complete(int x, int y);
+         ^
+src\events\choose_level_scene\render_scene\LevelSelector.cpp:92:21: note: Technically the member function 'LevelSelector::display_complete' can be static (but you may consider moving to unnamed namespace).
+void LevelSelector::display_complete(int x, int y)
+                    ^
+src\events\choose_level_scene\render_scene\LevelSelector.hpp:29:10: note: Technically the member function 'LevelSelector::display_complete' can be static (but you may consider moving to unnamed namespace).
+    void display_complete(int x, int y);
+         ^
+src\events\choose_level_scene\render_scene\LevelSelector.hpp:30:10: performance: inconclusive: Technically the member function 'LevelSelector::is_mouse_in' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    bool is_mouse_in(int mouse_x, int mouse_y, int x, int y);
+         ^
+src\events\choose_level_scene\render_scene\LevelSelector.cpp:97:21: note: Technically the member function 'LevelSelector::is_mouse_in' can be static (but you may consider moving to unnamed namespace).
+bool LevelSelector::is_mouse_in(int mouse_x, int mouse_y, int x, int y)
+                    ^
+src\events\choose_level_scene\render_scene\LevelSelector.hpp:30:10: note: Technically the member function 'LevelSelector::is_mouse_in' can be static (but you may consider moving to unnamed namespace).
+    bool is_mouse_in(int mouse_x, int mouse_y, int x, int y);
+         ^
+src\events\choose_level_scene\render_scene\LevelSelector.hpp:25:5: style: Class 'LevelSelector' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    LevelSelector(int level_id);
+    ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::attacked_time' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\Level\Level.cpp:5:8: warning: Member variable 'Level::zombie_has_coming' is not initialized in the constructor. [uninitMemberVar]
+Level::Level()
+       ^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::cold_time' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\Level\Level.cpp:5:8: warning: Member variable 'Level::zombie_count' is not initialized in the constructor. [uninitMemberVar]
+Level::Level()
+       ^
+src\elements\Level\Level.cpp:5:8: warning: Member variable 'Level::used_zombie_count' is not initialized in the constructor. [uninitMemberVar]
+Level::Level()
+       ^
+src\events\choose_level_scene\choose_level\choose_level.cpp:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::bite_time' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\Level\Level.cpp:5:8: warning: Member variable 'Level::next_wave_clk' is not initialized in the constructor. [uninitMemberVar]
+Level::Level()
+       ^
+src\events\in_game\credit\credit.cpp:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+src\elements\zombies\zombie_struct.cpp:48:9: warning: inconclusive: Member variable 'Zombie::next_step_time' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie()
+        ^
+src\elements\Level\Level.cpp:5:8: warning: Member variable 'Level::zombie_delay_state' is not initialized in the constructor. [uninitMemberVar]
+Level::Level()
+       ^
+src\events\in_game\credit\credit.cpp:113:15: style: Condition 'i!=MOUSE_CURSOR_DIRECTORY' is always true [knownConditionTrueFalse]
+        if (i != MOUSE_CURSOR_DIRECTORY)
+              ^
+src\events\in_game\credit\credit.cpp:112:46: note: Assuming that condition 'i<=DOOR_ZOMBIE_EATING_3_BLINK_DIRECTORY' is not redundant
+    for (int i = ZOMBIE_CREDIT1_DIRECTORY; i <= DOOR_ZOMBIE_EATING_3_BLINK_DIRECTORY; i++)
+                                             ^
+src\events\in_game\credit\credit.cpp:113:15: note: Condition 'i!=MOUSE_CURSOR_DIRECTORY' is always true
+        if (i != MOUSE_CURSOR_DIRECTORY)
+              ^
+src\elements\zombies\zombie_struct.cpp:57:9: warning: Member variable 'Zombie::health' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie(int _type, int level_num)
+        ^
+src\elements\zombies\zombie_struct.cpp:57:9: warning: Member variable 'Zombie::dir_width' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie(int _type, int level_num)
+        ^
+src\events\in_game\credit\credit.cpp:156:9: style: The scope of the variable 'cap_width' can be reduced. [variableScope]
+    int cap_width = sod_width + 2;
+        ^
+src\elements\zombies\zombie_struct.cpp:57:9: warning: Member variable 'Zombie::dir_height' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie(int _type, int level_num)
+        ^
+src\events\in_game\lose\lose.cpp:41:22: style: Variable 'zombie' can be declared as pointer to const [constVariableReference]
+    for (const auto &zombie : game_characters.zombies)
+                     ^
+src\events\in_game\lose\lose.cpp:41:5: style: Consider using std::any_of algorithm instead of a raw loop. [useStlAlgorithm]
+    for (const auto &zombie : game_characters.zombies)
+    ^
+src\elements\zombies\zombie_struct.cpp:57:9: warning: Member variable 'Zombie::nZom' is not initialized in the constructor. [uninitMemberVar]
+Zombie::Zombie(int _type, int level_num)
+        ^
+src\events\in_game\turbo\turbo.cpp:18:22: style: Variable 'zombie' can be declared as pointer to const [constVariableReference]
+    for (const auto &zombie : game_characters.zombies)
+                     ^
+src\events\in_game\turbo\turbo.cpp:22:9: style: Consider using std::any_of algorithm instead of a raw loop. [useStlAlgorithm]
+        {
+        ^
+src\elements\zombies\zombie_struct.hpp:63:9: style: inconclusive: Technically the member function 'Zombie::get_health' can be const. [functionConst]
+    int get_health();
+        ^
+src\elements\zombies\zombie_struct.cpp:90:13: note: Technically the member function 'Zombie::get_health' can be const.
+int Zombie::get_health()
+            ^
+src\elements\zombies\zombie_struct.hpp:63:9: note: Technically the member function 'Zombie::get_health' can be const.
+    int get_health();
+        ^
+src\elements\zombies\zombie_struct.hpp:67:10: style: inconclusive: Technically the member function 'Zombie::add_zombie_die' can be const. [functionConst]
+    void add_zombie_die(vector<ZombiePart> &zombie_parts);
+         ^
+src\elements\zombies\zombie_struct.cpp:165:14: note: Technically the member function 'Zombie::add_zombie_die' can be const.
+void Zombie::add_zombie_die(vector<ZombiePart> &zombie_parts)
+             ^
+src\elements\zombies\zombie_struct.hpp:67:10: note: Technically the member function 'Zombie::add_zombie_die' can be const.
+    void add_zombie_die(vector<ZombiePart> &zombie_parts);
+         ^
+src\elements\zombies\zombie_struct.hpp:56:18: style: Virtual function 'init' is called from constructor 'Zombie(int _type,int level_num)' at line 76. Dynamic binding is not used. [virtualCallInConstructor]
+    virtual void init(){};
+                 ^
+src\elements\zombies\zombie_struct.cpp:76:5: note: Calling init
+    init();
+    ^
+src\elements\zombies\zombie_struct.hpp:56:18: note: init is a virtual function
+    virtual void init(){};
+                 ^
+src\events\in_game\win\win.cpp:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+src\player\player_name.cpp:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+src\player\player_name.cpp:27:12: style: The scope of the variable 'line' can be reduced. [variableScope]
+    string line;
+           ^
+src\events\unlock_plant\unlock_plant.cpp:23:38: style: inconclusive: Function 'display_unlock_plant' argument 1 names different: declaration 'new_plant_dir' definition '_plant_type'. [funcArgNamesDifferent]
+void display_unlock_plant(const int &_plant_type)
+                                     ^
+src\events\unlock_plant\unlock_plant.hpp:5:38: note: Function 'display_unlock_plant' argument 1 names different: declaration 'new_plant_dir' definition '_plant_type'.
+void display_unlock_plant(const int &new_plant_dir);
+                                     ^
+src\events\unlock_plant\unlock_plant.cpp:23:38: note: Function 'display_unlock_plant' argument 1 names different: declaration 'new_plant_dir' definition '_plant_type'.
+void display_unlock_plant(const int &_plant_type)
+                                     ^
+src\player\player_name.cpp:184:17: performance: Passing the result of c_str() to a function that takes std::string as argument no. 1 is slow and redundant. [stlcstrParam]
+            win.show_text(inputText.c_str(), GET_NAME_MENU_X + GET_NAME_INPUT_X, GET_NAME_MENU_Y + GET_NAME_INPUT_Y, WHITE, HOUSEOFTERROR_TTF, 30);
+                ^
+src\events\unlock_plant\unlock_plant.cpp:103:16: style: Variable 'des' can be declared as reference to const [constVariableReference]
+    for (auto &des : description)
+               ^
+src\level\level_data.cpp:68:12: style: Unused variable: map_typ [unusedVariable]
+    string map_typ, wave_cnt, zombie_seq, wave_dur, temp;
+           ^
+src\events\start_game\start_game.cpp:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+src\level\level_data.cpp:68:21: style: Unused variable: wave_cnt [unusedVariable]
+    string map_typ, wave_cnt, zombie_seq, wave_dur, temp;
+                    ^
+src\events\start_game\start_game.cpp:55:12: style: Condition '!quit' is always true [knownConditionTrueFalse]
+    while (!quit && !game_started)
+           ^
+src\events\start_game\start_game.cpp:54:17: note: Assignment 'quit=false', assigned value is 0
+    bool quit = false;
+                ^
+src\events\start_game\start_game.cpp:55:12: note: Condition '!quit' is always true
+    while (!quit && !game_started)
+           ^
+src\level\level_data.cpp:68:31: style: Unused variable: zombie_seq [unusedVariable]
+    string map_typ, wave_cnt, zombie_seq, wave_dur, temp;
+                              ^
+src\events\start_game\start_game.cpp:54:10: style: Local variable 'quit' shadows outer variable [shadowVariable]
+    bool quit = false;
+         ^
+src\events\start_game\start_game.cpp:10:13: note: Shadowed declaration
+extern bool quit;
+            ^
+src\events\start_game\start_game.cpp:54:10: note: Shadow variable
+    bool quit = false;
+         ^
+src\level\level_data.cpp:68:43: style: Unused variable: wave_dur [unusedVariable]
+    string map_typ, wave_cnt, zombie_seq, wave_dur, temp;
+                                          ^
+src\level\level_data.cpp:68:53: style: Unused variable: temp [unusedVariable]
+    string map_typ, wave_cnt, zombie_seq, wave_dur, temp;
+                                                    ^
+src\events\in_game\turbo\turbo.cpp:16:0: style: The function 'auto_disable_turbo' is never used. [unusedFunction]
+void auto_disable_turbo()
+^
+src\music\music.cpp:108:0: style: The function 'delete_all_sound_effect' is never used. [unusedFunction]
+void delete_all_sound_effect()
+^
+src\draw\rsdl_img.cpp:335:0: style: The function 'delete_all_texture_no_use' is never used. [unusedFunction]
+void Window::delete_all_texture_no_use()
+^
+src\draw\render_elements.cpp:143:0: style: The function 'display_chosen_plant' is never used. [unusedFunction]
+void display_chosen_plant()
+^
+src\events\in_game\credit\credit.cpp:61:0: style: The function 'display_credit' is never used. [unusedFunction]
+void display_credit()
+^
+src\draw\render_message.cpp:24:0: style: The function 'display_game_announce' is never used. [unusedFunction]
+void display_game_announce()
+^
+src\events\in_game\main_menu\leave_menu.cpp:22:0: style: The function 'display_game_leave' is never used. [unusedFunction]
+void display_game_leave()
+^
+src\events\in_game\pause_menu\game_pause.cpp:13:0: style: The function 'display_game_pause' is never used. [unusedFunction]
+void display_game_pause()
+^
+src\events\in_game\restart_menu\restart_menu.cpp:23:0: style: The function 'display_game_restart' is never used. [unusedFunction]
+void display_game_restart()
+^
+src\elements\button\button.cpp:118:0: style: The function 'display_level_is_locked' is never used. [unusedFunction]
+void display_level_is_locked(const Button &button)
+^
+src\events\in_game\lose\lose.cpp:55:0: style: The function 'display_lose' is never used. [unusedFunction]
+void display_lose()
+^
+src\events\in_game\turbo\turbo.cpp:49:0: style: The function 'display_turbo_icon' is never used. [unusedFunction]
+void display_turbo_icon()
+^
+src\events\in_game\win\win.cpp:28:0: style: The function 'display_win' is never used. [unusedFunction]
+bool display_win()
+^
+src\draw\rsdl_img.cpp:114:0: style: The function 'draw_bmp' is never used. [unusedFunction]
+void Window::draw_bmp(int file_num, int x, int y, int width, int height)
+^
+src\draw\rsdl_draw.cpp:37:0: style: The function 'draw_point' is never used. [unusedFunction]
+void Window::draw_point(int x, int y, RGB color)
+^
+src\draw\rsdl_draw.cpp:46:0: style: The function 'draw_rect' is never used. [unusedFunction]
+void Window::draw_rect(int x, int y, int width, int height, RGB color)
+^
+src\draw\rsdl.hpp:132:0: style: The function 'dump_err' is never used. [unusedFunction]
+ void dump_err() { std::cerr << SDL_GetError() << '\n'; }
+^
+src\elements\plants\plants.cpp:45:0: style: The function 'get_type' is never used. [unusedFunction]
+int Plants::get_type() const
+^
+src\elements\elements_actions.cpp:28:0: style: The function 'handle_changes' is never used. [unusedFunction]
+void handle_changes()
+^
+src\events\in_game\main_menu\leave_menu.cpp:51:0: style: The function 'handle_leave_menu_click' is never used. [unusedFunction]
+void handle_leave_menu_click(const int &mouse_x, const int &mouse_y)
+^
+src\events\in_game\pause_menu\game_pause.cpp:31:0: style: The function 'handle_menu_click' is never used. [unusedFunction]
+void handle_menu_click(const int &mouse_x, const int &mouse_y)
+^
+src\elements\elements_actions.cpp:178:0: style: The function 'handle_movements' is never used. [unusedFunction]
+void handle_movements()
+^
+src\events\in_game\pause_menu\game_pause.cpp:58:0: style: The function 'handle_pause_icon_click' is never used. [unusedFunction]
+void handle_pause_icon_click(const int &mouse_x, const int &mouse_y)
+^
+src\events\in_game\restart_menu\restart_menu.cpp:52:0: style: The function 'handle_restart_menu_click' is never used. [unusedFunction]
+void handle_restart_menu_click(const int &mouse_x, const int &mouse_y)
+^
+src\events\in_game\turbo\turbo.cpp:35:0: style: The function 'handle_turbo_icon_click' is never used. [unusedFunction]
+void handle_turbo_icon_click(const int &mouse_x, const int &mouse_y)
+^
+src\events\in_game\game\player_click.cpp:23:0: style: The function 'handle_user_click' is never used. [unusedFunction]
+void handle_user_click(const int &mouse_x, const int &mouse_y)
+^
+src\events\in_game\volume\volume.cpp:34:0: style: The function 'handle_volume_change' is never used. [unusedFunction]
+void handle_volume_change()
+^
+src\events\in_game\lose\lose.cpp:39:0: style: The function 'has_player_lost' is never used. [unusedFunction]
+bool has_player_lost()
+^
+src\events\in_game\win\win.cpp:15:0: style: The function 'has_player_won' is never used. [unusedFunction]
+bool has_player_won()
+^
+src\elements\plants\PotatoMine\PotatoMine.cpp:144:0: style: The function 'is_armed' is never used. [unusedFunction]
+bool PotatoMine::is_armed()
+^
+src\draw\rsdl_ttf.cpp:144:0: style: The function 'show_text_utf8' is never used. [unusedFunction]
+void Window::show_text_utf8(const string &input, const int &x, const int &y,
+^
+nofile:0:0: information: Active checkers: 178/856 (use --checkers-report=<filename> to see details) [checkersReport]
+

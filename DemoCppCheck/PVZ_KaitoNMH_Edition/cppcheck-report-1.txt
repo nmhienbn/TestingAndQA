@@ -1,0 +1,12 @@
+src\elements\plants\sunflower\sunflower.cpp:99:28: error: Uninitialized variable: temp.x_location [uninitvar]
+            suns.push_back(temp);
+                           ^
+src\elements\plants\sunflower\sunflower.cpp:99:28: error: Uninitialized struct member: temp.x_location [uninitStructMember]
+            suns.push_back(temp);
+                           ^
+src\elements\sun\sun.cpp:21:20: error: Uninitialized variable: temp.x_location [uninitvar]
+    suns.push_back(temp);
+                   ^
+src\elements\sun\sun.cpp:21:20: error: Uninitialized struct member: temp.x_location [uninitStructMember]
+    suns.push_back(temp);
+                   ^
