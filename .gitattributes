@@ -1,0 +1,8 @@
+# normalize all text files to LF in repo, convert to native on checkout
+* text=auto
+
+# or force specific extensions
+*.py text eol=lf
+*.cpp text eol=lf
+*.h   text eol=lf
+DemoCppCheck/Juliet_Test_Suite/cppcheck-report.xml filter=lfs diff=lfs merge=lfs -text

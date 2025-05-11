@@ -1,0 +1,7 @@
+# Chạy Cppcheck, xuất XML ra file cppcheck.xml
+cppcheck --enable=all -j32 --cppcheck-build-dir=tmp --inconclusive --xml --xml-version=2 testcases/ 2> cppcheck-report.xml
+
+cppcheck -j32 --cppcheck-build-dir=tmp2 --xml --xml-version=2 testcases/ 2> cppcheck-report-2.xml
+
+python check_errors.py --manifest manifest.xml --xml      cppcheck-report-2.xml
+

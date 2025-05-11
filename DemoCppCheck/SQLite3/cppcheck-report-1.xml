@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.17.1"/>
+    <errors>
+        <error id="preprocessorErrorDirective" severity="error" msg="#error wrong numeric code for read-transaction" verbose="#error wrong numeric code for read-transaction" file0="src/btmutex.c">
+            <location file="src\btreeInt.h" line="383" column="3"/>
+        </error>
+        <error id="objectIndex" severity="warning" msg="The address of variable &apos;iCol&apos; might be accessed at non-zero index." verbose="The address of variable &apos;iCol&apos; might be accessed at non-zero index." cwe="758" file0="src/fkey.c">
+            <location file="src\fkey.c" line="971" column="16"/>
+            <location file="src\fkey.c" line="968" column="15" info="Address of variable taken here."/>
+        </error>
+        <error id="objectIndex" severity="warning" msg="The address of variable &apos;iCol&apos; might be accessed at non-zero index." verbose="The address of variable &apos;iCol&apos; might be accessed at non-zero index." cwe="758" file0="src/fkey.c">
+            <location file="src\fkey.c" line="972" column="14"/>
+            <location file="src\fkey.c" line="968" column="15" info="Address of variable taken here."/>
+        </error>
+        <error id="memleakOnRealloc" severity="error" msg="Common realloc mistake: &apos;p&apos; nulled but not freed upon failure" verbose="Common realloc mistake: &apos;p&apos; nulled but not freed upon failure" cwe="401" file0="src/mem1.c">
+            <location file="src\mem1.c" line="215" column="3"/>
+            <symbol>p</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="src/mutex_w32.c">
+            <location file="src\mutex_w32.c" line="93" column="3"/>
+        </error>
+        <error id="autoVariables" severity="error" msg="Address of local auto-variable assigned to a function parameter." verbose="Dangerous assignment - the function parameter is assigned the address of a local auto-variable. Local auto-variables are reserved from the stack which is freed when the function ends. So the pointer to a local variable is invalid after the function ends." cwe="562" file0="src/prepare.c">
+            <location file="src\prepare.c" line="698" column="3"/>
+        </error>
+        <error id="autoVariables" severity="error" msg="Address of local auto-variable assigned to a function parameter." verbose="Dangerous assignment - the function parameter is assigned the address of a local auto-variable. Local auto-variables are reserved from the stack which is freed when the function ends. So the pointer to a local variable is invalid after the function ends." cwe="562" file0="src/table.c">
+            <location file="src\table.c" line="176" column="3"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="src/os_unix.c">
+            <location file="src\os_unix.c" line="3680" column="8"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="src/os_win.c">
+            <location file="src\os_win.c" line="1550" column="7"/>
+        </error>
+        <error id="autoVariables" severity="error" msg="Address of local auto-variable assigned to a function parameter." verbose="Dangerous assignment - the function parameter is assigned the address of a local auto-variable. Local auto-variables are reserved from the stack which is freed when the function ends. So the pointer to a local variable is invalid after the function ends." cwe="562" file0="src/select.c">
+            <location file="src\select.c" line="1272" column="7"/>
+        </error>
+        <error id="nullPointerOutOfMemory" severity="warning" msg="If memory allocation fails, then there is a possible null pointer dereference: zCopy" verbose="If memory allocation fails, then there is a possible null pointer dereference: zCopy" cwe="476" file0="src/test1.c">
+            <location file="src\test1.c" line="4944" column="12" info="Null pointer dereference"/>
+            <location file="src\test1.c" line="4943" column="19" info="Assignment &apos;zCopy=malloc(bytes)&apos;, assigned value is 0"/>
+            <location file="src\test1.c" line="4943" column="19" info="Assuming allocation function fails"/>
+            <symbol>zCopy</symbol>
+        </error>
+        <error id="nullPointerOutOfMemory" severity="warning" msg="If memory allocation fails, then there is a possible null pointer dereference: pRet" verbose="If memory allocation fails, then there is a possible null pointer dereference: pRet" cwe="476" file0="src/test_mutex.c">
+            <location file="src\test_mutex.c" line="105" column="3" info="Null pointer dereference"/>
+            <location file="src\test_mutex.c" line="97" column="12" info="Assignment &apos;pRet=(sqlite3_mutex*)malloc(sizeof(sqlite3_mutex))&apos;, assigned value is 0"/>
+            <location file="src\test_mutex.c" line="97" column="35" info="Assuming allocation function fails"/>
+            <symbol>pRet</symbol>
+        </error>
+        <error id="nullPointerOutOfMemory" severity="warning" msg="If memory allocation fails, then there is a possible null pointer dereference: zCopy" verbose="If memory allocation fails, then there is a possible null pointer dereference: zCopy" cwe="476" file0="src/test1.c">
+            <location file="src\test1.c" line="4948" column="12" info="Null pointer dereference"/>
+            <location file="src\test1.c" line="4947" column="19" info="Assignment &apos;zCopy=malloc(n)&apos;, assigned value is 0"/>
+            <location file="src\test1.c" line="4947" column="19" info="Assuming allocation function fails"/>
+            <symbol>zCopy</symbol>
+        </error>
+        <error id="nullPointerOutOfMemory" severity="warning" msg="If memory allocation fails, then there is a possible null pointer dereference: zCopy" verbose="If memory allocation fails, then there is a possible null pointer dereference: zCopy" cwe="476" file0="src/test1.c">
+            <location file="src\test1.c" line="5019" column="12" info="Null pointer dereference"/>
+            <location file="src\test1.c" line="5018" column="19" info="Assignment &apos;zCopy=malloc(bytes)&apos;, assigned value is 0"/>
+            <location file="src\test1.c" line="5018" column="19" info="Assuming allocation function fails"/>
+            <symbol>zCopy</symbol>
+        </error>
+        <error id="nullPointerOutOfMemory" severity="warning" msg="If memory allocation fails, then there is a possible null pointer dereference: pRet" verbose="If memory allocation fails, then there is a possible null pointer dereference: pRet" cwe="476" file0="src/test_mutex.c">
+            <location file="src\test_mutex.c" line="106" column="3" info="Null pointer dereference"/>
+            <location file="src\test_mutex.c" line="97" column="12" info="Assignment &apos;pRet=(sqlite3_mutex*)malloc(sizeof(sqlite3_mutex))&apos;, assigned value is 0"/>
+            <location file="src\test_mutex.c" line="97" column="35" info="Assuming allocation function fails"/>
+            <symbol>pRet</symbol>
+        </error>
+        <error id="nullPointerOutOfMemory" severity="warning" msg="If memory allocation fails, then there is a possible null pointer dereference: zCopy" verbose="If memory allocation fails, then there is a possible null pointer dereference: zCopy" cwe="476" file0="src/test1.c">
+            <location file="src\test1.c" line="5023" column="12" info="Null pointer dereference"/>
+            <location file="src\test1.c" line="5022" column="19" info="Assignment &apos;zCopy=malloc(n)&apos;, assigned value is 0"/>
+            <location file="src\test1.c" line="5022" column="19" info="Assuming allocation function fails"/>
+            <symbol>zCopy</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: pStmt" verbose="Uninitialized variable: pStmt" cwe="457" file0="src/test1.c">
+            <location file="src\test1.c" line="4398" column="19"/>
+            <symbol>pStmt</symbol>
+        </error>
+        <error id="memleakOnRealloc" severity="error" msg="Common realloc mistake: &apos;zBuf&apos; nulled but not freed upon failure" verbose="Common realloc mistake: &apos;zBuf&apos; nulled but not freed upon failure" cwe="401" file0="src/test_malloc.c">
+            <location file="src\test_malloc.c" line="1084" column="5"/>
+            <symbol>zBuf</symbol>
+        </error>
+        <error id="ctunullpointer" severity="error" msg="Null pointer dereference: p" verbose="Null pointer dereference: p" cwe="476" file0="src/memjournal.c">
+            <location file="src\memjournal.c" line="431" column="10" info="Dereferencing argument p that is null"/>
+            <location file="src\os.c" line="223" column="3" info="Calling function sqlite3JournalIsInMemory, 1st argument is null"/>
+        </error>
+    </errors>
+</results>
